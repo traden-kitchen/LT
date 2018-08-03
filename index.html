@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121467404-1"></script>
+	<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-121467404-1');
+	</script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="shortcut icon" href="asset/icon.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@waritocomatta">
+	<meta name="twitter:creator" content="@Swaritocomatta">
+	<meta property="og:title" content="reveal.jsをLP開発に転用!｜Motone Adachi｜@waritocomatta">
+	<meta property="og:description" content="reveal.jsでのLT資料作成やLP開発にてCLIツール(npm(ejs-c,browserify(watchify)forJS,node-sass))を使うことでコンパクト化,リクエスト数削減を実施しました。webfontloaderによるfont管理付き。">
+	<meta property="og:image" content="https://revecoma-pr.netlify.com/asset/thumbnail.png">
+	<title>reveal.jsをLP開発に転用!｜Motone Adachi｜@waritocomatta</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="reveal">
+	<div id="fluffyLogo">
+		<div class="logo">
+			<span>N HIGH</span>
+			<img src="asset/logo.svg">
+			<span>SCHOOL</span>
+		</div>
+		<div class="logo">
+			<img src="asset/logo.svg">
+			<span>@waritocomatta</span>
+		</div>
+		<div class="logo">
+			<img src="asset/logo.svg">
+		</div>
+		<div class="logo">
+			<span>MOTONE</span>
+			<img src="asset/logo.svg">
+			<span>ADACHI</span>
+		</div>
+		<div class="logo">
+			<span>足立</span>
+			<img src="asset/logo.svg">
+			<span>素音</span>
+		</div>
+	</div>
+	<div class="inside-shadow-layer"></div>
+	<div id="solid-animation"></div>
+	<div id="check-animation"></div>
+	<div class="slides">
+		<section data-background-transition="zoom" style="filter: drop-shadow(1px 1px 8px #000000);">
+			<section data-background="#eae264">
+				<div id="scrollArea" class="fragment">
+					<table id="fontStatus" style="font-size: 1em;font-family: 'fontopoSunnyDay-Regular';background-color: rgba(255,255,255,0.35);"></table>
+				</div>
+			</section>
+            <section data-background="#d35400" data-background-transition="zoom" style="filter: drop-shadow(30px 30px 2px #000000);">
+                <p id="titleStyle" style='font-family: "851H-kktt_004";'>
+                    reveal.jsを<br>LP開発に転用!
+                </p>
+            </section>
+		</section>
+        <section data-background-transition="zoom" style="filter: drop-shadow(30px 30px 2px #000000);">
+            <section data-background="#622d18">
+                <h1 id="profileStyle">
+                    自己<span style="font-family: 'PixelMplus12-Regular';">紹</span>介
+                </h1>
+            </section>
+            <section data-background="#622d18">
+                <table style="font-size: 1.2em;font-family: 'GenEiAntique_v4';background-color: rgba(0,0,0,0.35);">
+                    <tr>
+                        <td>
+                            株式会社Grander
+                        </td>
+                        <td>
+                            CakePHP<br>新人教育 (2016/04~)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            株式会社TechBeans
+                        </td>
+                        <td>
+                            CakePHP<br>EC保守
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            株式会社Aijus
+                        </td>
+                        <td>
+                            Zend ASP.NET<br>外国人向け観光情報
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            株式会社Aisii<br>その他
+                        </td>
+                        <td>
+                            Electron Express Sails Rails (~現在)
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+        <section>
+            <section><h1 id="pointStyle" style='font-family: "851H-kktt_004";'>reveal.jsを<br>使いました。</h1></section>
+            <section style="filter: drop-shadow(30px 30px 2px #000000);">
+                <table style="font-size: 1.2em;font-family: 'GenEiAntique_v4';background-color: rgba(0,0,0,0.35);">
+                    <tr>
+                        <td>
+                            チーム開発がいい感じになったので共有
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            N高×Dwango×MS社<br>ハッカソンイベント成果発表
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section>
+                <table style="font-size: 1.2em;font-family: 'GenEiAntique_v4';background-color: rgba(0,0,0,0.35);">
+                    <tr>
+                        <td>
+                            CSSAnimation
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            WebGL
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Canvas
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Markdown
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+        <section>
+            <section data-background="#e84118"><h1 id="actionStyle">Webページ作成で<br>使うために…</h1></section>
+            <section data-background="#e84118">
+                <table style="font-size: 1.2em;font-family: 'GenEiAntique_v4';background-color: rgba(0,0,0,0.35);">
+                    <tr>
+                        <td>
+                            WebFontLoaderJSでFont管理
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            大量のCSSファイルをscssで1個に
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            大量のJSファイルを<br>Browserifyで略1個に
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            EJSでスライド部分とその他を分離
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            twitterCardとかもつけとく
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section data-background="#e84118">
+                <pre>
+onchange index.ejs -- ejs-c index.ejs -o index.html
+
+watchify dev.js -o main.js
+
+node-sass dev.scss main.css --output-style compressed
+
+live-server
+                </pre>
+                <a href="https://github.com/waricoma/revecoma-pr" target="_blank">https://github.com/waricoma/revecoma-pr</a>
+            </section>
+        </section>
+        <section data-background-transition="zoom" data-background="#1B1464">
+            <h1 id="thanksStyle">
+                ご清聴下さりありがとうございました。
+                <br>
+                m(_ _ )m <span style="font-family: 'PixelMplus12-Regular'">ﾍﾟｸﾘ</span>
+            </h1>
+        </section>
+	</div>
+</div>
+<script src="js/reveal.js"></script>
+<script src="js/main.js"></script>
+<script src="https://embed.small.chat/T32N53BHDGBQ3Y05HP.js" async=""></script>
+</body>
+</html>
